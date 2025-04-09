@@ -63,5 +63,20 @@ public class TrayectosService {
     }
 
 
+    //CU002 registrar ubicacion
+    //1. INgresar el id del trayecto en curso
+    //4. Ingresar longitud y latitud
+    public void registrarUbicacion(UUID id, Double longitud, Double latitud) throws Exception{
+        //2 verificar existencia del ID
+        Optional<Trayecto> optTrayecto = trayectos.findById(id);
+        if(optTrayecto.isEmpty()){
+            throw new Exception(message: "No existe un trayecto con ese id");
+        }
+
+
+        
+    }
+
+
 
 }
